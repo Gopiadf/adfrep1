@@ -1,0 +1,35 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000�\u001d[Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0004\u0000manifest.mf��\u0000\u0000-�;\u000e� \f@�ҙ��\u0001\u0015o��!�\u0016�\u0000&�\u0016��ep}y�=p�~���\u0000��\u0014�8�@��Z�2��s�t�hW�8�0��m�l�",
+				"type": "String"
+			},
+			{
+				"name": "}��=ű�H\u0006�d�e�_M\u000e�~PK\u0007\b�m��[\u0000\u0000\u0000e\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�\u001d[Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000mounting.python�]\tw۶��+<����g���͉��-��l���q�\u000e\b�\u0016k�TI�K{r�\u001b��fS��8y��p{r(",
+				"type": "String"
+			},
+			{
+				"name": "3X�\u0019`��߭3��q��6[��B�iz�\u001e��[i\u0016�\u001c��&�\u0019#�",
+				"type": "String"
+			}
+		]
+	}
+}
