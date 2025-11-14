@@ -1,0 +1,51 @@
+{
+	"name": "PL_IF Condition",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"description": "true",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(pipeline().parameters.par1,'gopi')",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Wait2",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 3
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 5
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"par1": {
+				"type": "string",
+				"defaultValue": "gopi"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-10-31T21:36:08Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

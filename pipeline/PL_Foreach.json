@@ -1,0 +1,45 @@
+{
+	"name": "PL_Foreach",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.par",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"par": {
+				"type": "array",
+				"defaultValue": [
+					11,
+					22,
+					33,
+					44
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-11-04T01:48:36Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

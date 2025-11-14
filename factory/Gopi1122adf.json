@@ -1,0 +1,17 @@
+{
+	"name": "Gopi1122adf",
+	"properties": {
+		"globalParameters": {
+			"wait time": {
+				"type": "int",
+				"value": 5
+			}
+		}
+	},
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "52a6fd4e-7070-4ba8-a347-ec02ed2f64c7",
+		"tenantId": "ed25fa0a-205d-41f6-8726-8783c59de227"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"name": "PL_Sample1",
+	"properties": {
+		"description": "my first pipeline",
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.par",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"par": {
+				"type": "int",
+				"defaultValue": 10
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-10-30T13:14:25Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

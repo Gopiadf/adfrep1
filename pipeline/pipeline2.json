@@ -1,0 +1,62 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "Until1",
+				"type": "Until",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@greaterOrEquals(variables('var'),pipeline().parameters.par)",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Wait2",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
+					"timeout": "0.12:00:00"
+				}
+			}
+		],
+		"parameters": {
+			"par": {
+				"type": "int",
+				"defaultValue": 10
+			}
+		},
+		"variables": {
+			"var": {
+				"type": "Integer",
+				"defaultValue": 12
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-11-04T02:14:45Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
